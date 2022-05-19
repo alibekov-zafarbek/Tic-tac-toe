@@ -9,9 +9,9 @@ const Board = (props) => {
       {props.cellValues.map((val, idx) => {
         const isHighLight =
           props.winnerCombination && props.winnerCombination.indexOf(idx) >= 0;
-
         return (
           <Cell
+            wincolor={props.winner}
             key={idx}
             value={val}
             highlight={isHighLight}

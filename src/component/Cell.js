@@ -14,7 +14,7 @@ const Cell = (props) => {
  
   return (
     <button className={cellClasses} onClick={ props.showCase}>
-      <span className={cellContentClasses}>{props.value}</span>
+      <span style={{color: props.value === props.wincolor ? '#ffffffff' : "#FFDE03FF" }} className={cellContentClasses}>{props.value}</span>
     </button>
   );
 };

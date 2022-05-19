@@ -45,8 +45,8 @@ const winnigMatrix = {
 
 const calculateWinner = (cellVal,newNumberOfTurn, cellIndex) => {
   const winnigRange = winnigMatrix[cellIndex];
-for(let i = 0; i < winnigRange.length; i++){
-  const currentValue =  cellVal[cellIndex];
+  for(let i = 0; i < winnigRange.length; i++){
+    const currentValue =  cellVal[cellIndex];
   const firstOption = cellVal[winnigRange[i][0]];
   const secondOption = cellVal[winnigRange[i][1]];
 

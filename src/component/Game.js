@@ -21,7 +21,9 @@ const Game = () => {
   const [winner, setWinner] = useState();
   // eslint-disable-next-line no-unused-vars
   const [winningCombination, setWinningCombination] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const winnerCombination = [];
+
   const isCellImpty = (cellIndex) => cellValues[cellIndex] === "";
 
   const cellClick = (cellIndex) => {
@@ -57,14 +59,17 @@ const Game = () => {
 
   return (
     <>
-      <div id="game">
-        <h1>the Best Game for Waste Time</h1>
+       <div className="logo">
+         <span style={{'--i':'1'}}>T</span>
+         <span style={{'--i':'2'}}>R</span>
+         <span style={{'--i':'3'}}>Y</span>
+       </div>
         <Board
           cellValues={cellValues}
-          winnerCombination={winnerCombination}
+          winnerCombination={winningCombination}
           cellClick={cellClick}
+          winner={winner}
         />
-      </div>
       <Modal gameOver={gameOver} winner={winner} onNewGame={onNewGame} />
     </>
   );
