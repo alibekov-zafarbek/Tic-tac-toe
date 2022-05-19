@@ -144,7 +144,7 @@ h1 {
 }
 #game-result-modal {
   display: grid;
-  grid-row-gap: 76vmin;
+  grid-row-gap: 65vmin;
 
   --modal-items-border-radius: 2vmin;
 }
